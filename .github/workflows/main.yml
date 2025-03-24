@@ -16,8 +16,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Compile Java Code
-        run: javac Main.java
+      - name: Install Maven
+        run: sudo apt update && sudo apt install -y maven
 
-      - name: Run Tests
-        run: java org.junit.runner.JUnitCore TestMain
+      - name: Compile and Run Tests with Maven
+        run: mvn test
