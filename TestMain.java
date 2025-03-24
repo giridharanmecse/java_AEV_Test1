@@ -6,5 +6,7 @@ public class TestMain {
     public void testAddition() {
         assertEquals(10, Main.add(5, 5));
         assertEquals(20, Main.add(10, 10));
+        assertEquals(0, Main.add(-5, 5));
+        assertEquals(-10, Main.add(-5, -5));
     }
 }
